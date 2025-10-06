@@ -1,0 +1,27 @@
+@use '../../../styles' as *;
+
+.app-project-card {
+  color: $text-dark;
+  background: #202429;
+  border-color: $background-secondary-dark;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.app-projects-photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+.app-project-button {
+  background-color: #98013e;
+  border: #050505;
+
+  &:hover {
+    background-color: #860438;
+    border: #050505;
+  }
+}

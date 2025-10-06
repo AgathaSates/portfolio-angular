@@ -1,0 +1,33 @@
+@use '../../../styles' as *;
+@use '../as-project-modal/as-project-modal.scss' as *;
+
+.app-highlights-photo {
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+
+  --ring-size: 4px;
+  --ring-back: $background-dark;
+  border-radius: 50%;
+  border: var(--ring-size) solid transparent;
+  background:
+    linear-gradient(transparent, transparent) padding-box,
+    linear-gradient(
+        to right top,
+        #7c2174,
+        #8a1365,
+        #930255,
+        #980043,
+        #9a0332,
+        #8e0632,
+        #820a32,
+        #760d31,
+        #561436,
+        #361630,
+        #1c1321,
+        #050505
+      )
+      border-box;
+}

@@ -1,0 +1,26 @@
+<div class="card rounded-4 h-100 app-project-card">
+  <img
+    [src]="urlGifCard"
+    class="app-projects-photo"
+    [alt]="altCard"
+    loading="lazy"
+    decoding="async"
+  />
+  <div class="card-body text-center">
+    <h3 class="card-title">{{ titleCard }}</h3>
+    <div class="d-flex gap-2 mt-auto pt-2 justify-content-center">
+      <button
+        type="button"
+        class="btn btn-secondary app-project-button"
+        data-bs-toggle="modal"
+        [attr.data-bs-target]="'#' + modalId"
+      >
+        <i class="bi bi-window-plus"></i>
+        Ver projeto
+      </button>
+      <a [href]="linkRepository" target="_blank" class="btn btn-secondary"
+        ><i class="bi bi-github"></i> Repositório</a
+      >
+    </div>
+  </div>
+</div>

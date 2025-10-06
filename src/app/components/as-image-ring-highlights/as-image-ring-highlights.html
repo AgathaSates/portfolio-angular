@@ -1,0 +1,98 @@
+<div class="text-center animate__animated animate__backInDown">
+  <a role="button" data-bs-toggle="modal" [attr.data-bs-target]="'#' + modalId">
+    <img
+      [src]="highlight.urlImage"
+      class="rounded-circle app-highlights-photo"
+      [alt]="highlight.title"
+      [title]="highlight.title"
+      loading="lazy"
+    />
+  </a>
+  <div class="pt-1">
+    <span>{{ highlight.title }}</span>
+  </div>
+</div>
+
+<div class="modal fade" tabindex="-1" [id]="modalId" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-dark text-white border-0">
+      <div class="modal-header border-0">
+        <div class="d-flex align-items-center gap-3">
+          <img
+            class="avatar-32 rounded-circle object-fit-cover flex-shrink-0 border-secondary-subtle shadow-sm"
+            [src]="highlight.authorAvatarUrl"
+            alt="Foto Agatha Sates"
+            loading="lazy"
+          />
+          <h5 class="modal-title">{{ highlight.title }}</h5>
+        </div>
+
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Fechar"
+        ></button>
+      </div>
+
+      <div class="modal-body">
+        @switch (highlight.type) {
+          @case (HighlightKind.certificates) {
+            <div class="carousel slide" [id]="carouselId">
+              <div class="carousel-inner">
+                @for (certificate of highlight.certificates ?? []; track $index) {
+                  <div class="carousel-item" [class.active]="$index === 0">
+                    <img
+                      class="d-block w-100"
+                      [src]="certificate.imageUrl"
+                      [alt]="certificate.title"
+                    />
+                    @if (certificate.title || certificate.description) {
+                      <div class="carousel-caption d-none d-md-block">
+                        <h6 class="mb-1">{{ certificate.title }}</h6>
+                        @if (certificate.description) {
+                          <p class="mb-0">{{ certificate.description }}</p>
+                        }
+                      </div>
+                    }
+                  </div>
+                }
+              </div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                [attr.data-bs-target]="'#' + carouselId"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                [attr.data-bs-target]="'#' + carouselId"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
+              </button>
+            </div>
+          }
+
+          @case (HighlightKind.aboutme) {
+            <p>sobre mim</p>
+          }
+
+          @case (HighlightKind.technologies) {
+            <p>tecnolias</p>
+          }
+
+          @default {
+            <p class="text-muted mb-0">Conteúdo não configurado para este destaque.</p>
+          }
+        }
+      </div>
+    </div>
+  </div>
+</div>

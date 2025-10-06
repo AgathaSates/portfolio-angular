@@ -1,0 +1,20 @@
+@use '../../../styles' as *;
+
+.app-bottom-navbar {
+  background-color: $background-dark;
+  border-top-color: $background-secondary-dark !important;
+  .bi {
+    color: $text-dark;
+    font-size: 1.8rem;
+    line-height: 1;
+    transition: transform 0.2s ease;
+  }
+  .nav-item {
+    border-radius: 1rem;
+    &.active,
+    &:hover {
+      background-color: $background-secondary-dark;
+      transform: scale(1.08);
+    }
+  }
+}

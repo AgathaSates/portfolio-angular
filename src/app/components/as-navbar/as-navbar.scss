@@ -1,0 +1,7 @@
+@use '../../../styles' as *;
+
+.app-nav-bar {
+  background-color: $background-dark !important;
+  border-bottom-color: $background-secondary-dark !important;
+  color: $text-dark !important;
+}
