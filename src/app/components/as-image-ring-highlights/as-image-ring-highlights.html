@@ -35,8 +35,34 @@
         ></button>
       </div>
 
-      <div class="modal-body">
+      <div class="modal-body pt-0">
         @switch (highlight.type) {
+          @case (HighlightKind.technologies) {
+            <section class="row row-cols-1 row-cols-sm-2 g-2 py-3 pt-0">
+              @for (tec of highlight.tecnologies; track $index) {
+                <div class="col">
+                  <div class="card app-project-card">
+                    <div class="card-body">
+                      <h4 class="fw-semibold pb-2">{{ tec.technologytype }}</h4>
+                      <div class="d-flex flex-wrap gap-2 gap-sm-2">
+                        @for (skill of tec.skills; track $index) {
+                          <img
+                            [src]="skill.image"
+                            [alt]="skill.alt"
+                            [title]="skill.alt"
+                            width="36"
+                            height="36"
+                            loading="lazy"
+                          />
+                        }
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              }
+            </section>
+          }
+
           @case (HighlightKind.certificates) {
             <div class="carousel slide" [id]="carouselId">
               <div class="carousel-inner">
@@ -47,14 +73,6 @@
                       [src]="certificate.imageUrl"
                       [alt]="certificate.title"
                     />
-                    @if (certificate.title || certificate.description) {
-                      <div class="carousel-caption d-none d-md-block">
-                        <h6 class="mb-1">{{ certificate.title }}</h6>
-                        @if (certificate.description) {
-                          <p class="mb-0">{{ certificate.description }}</p>
-                        }
-                      </div>
-                    }
                   </div>
                 }
               </div>
@@ -81,11 +99,100 @@
           }
 
           @case (HighlightKind.aboutme) {
-            <p>sobre mim</p>
-          }
+            <section>
+              <div class="card app-project-card">
+                <div class="card-body text-center">
+                  <div>
+                    <div class="d-flex justify-content-center pb-2">
+                      <app-as-image-ring-profile
+                        [profileImage]="'agatha2.jpg'"
+                      ></app-as-image-ring-profile>
+                    </div>
+                    <p class="mb-3">
+                      Olá! Eu sou a <strong>Agatha</strong>, tenho <strong>24 anos</strong> e sou de
+                      <strong>Canoas (RS)</strong>. Estudante da
+                      <strong>Academia do Programador</strong>, Tenho experiência em
+                      <strong>vendas</strong>, onde desenvolvi comunicação, negociação e
+                      comprometimento. Hoje estou construindo uma carreira como
+                      <strong>desenvolvedora Full-Stack</strong>.
+                    </p>
 
-          @case (HighlightKind.technologies) {
-            <p>tecnolias</p>
+                    <div class="d-flex flex-wrap justify-content-center gap-2 mb-3">
+                      <span class="badge text-bg-success rounded-pill">Aberta a oportunidades</span>
+                      <span class="badge text-bg-info rounded-pill"
+                        >Júnior • Remoto ou Canoas/Porto Alegre</span
+                      >
+                    </div>
+
+                    <ul class="mb-3 d-inline-block text-start m-0 ps-0">
+                      <li class="d-flex align-items-start gap-2">
+                        <span class="mt-1" aria-hidden="true">▸</span>
+                        <span
+                          ><strong>Das vendas, trago:</strong> suporte ao cliente, negociação e foco
+                          em solução de problemas.</span
+                        >
+                      </li>
+                      <li class="d-flex align-items-start gap-2">
+                        <span class="mt-1" aria-hidden="true">▸</span>
+                        <span>
+                          <strong>Foco atual:</strong> desenvolvimento Full Stack, consolidando
+                          bases e prática contínua.
+                        </span>
+                      </li>
+                      <li class="d-flex align-items-start gap-2">
+                        <span class="mt-1" aria-hidden="true">▸</span>
+                        <span>
+                          <strong>Objetivo:</strong> atuar como Desenvolvedora Full-Stack Júnior
+                          (remoto ou Canoas/Porto Alegre).</span
+                        >
+                      </li>
+                    </ul>
+
+                    <div class="mb-3">
+                      <div class="mb-1"><h6 class="pb-2">Competências</h6></div>
+                      <div class="d-flex flex-wrap justify-content-center gap-2">
+                        <img
+                          alt="Trabalho em Equipe"
+                          src="https://img.shields.io/badge/Trabalho%20em%20Equipe-f58220?style=for-the-badge&logo=handshake&logoColor=fff"
+                          loading="lazy"
+                          height="25"
+                        />
+                        <img
+                          alt="Aprendizado Contínuo"
+                          src="https://img.shields.io/badge/Aprendizado%20Cont%C3%ADnuo-9cf?style=for-the-badge&logo=readthedocs&logoColor=000"
+                          loading="lazy"
+                          height="25"
+                        />
+                        <img
+                          alt="Resolução de Problemas"
+                          src="https://img.shields.io/badge/Resolu%C3%A7%C3%A3o%20de%20Problemas-00b894?style=for-the-badge&logo=codeforces&logoColor=fff"
+                          loading="lazy"
+                          height="25"
+                        />
+                        <img
+                          alt="Comprometimento"
+                          src="https://img.shields.io/badge/Comprometimento-ffd166?style=for-the-badge&logo=clockify&logoColor=000"
+                          loading="lazy"
+                          height="25"
+                        />
+                        <img
+                          alt="Liderança"
+                          src="https://img.shields.io/badge/Lideran%C3%A7a-8a2be2?style=for-the-badge&logo=crowdin&logoColor=fff"
+                          loading="lazy"
+                          height="25"
+                        />
+                        <img
+                          alt="Comunicação"
+                          src="https://img.shields.io/badge/Comunica%C3%A7%C3%A3o-1f75fe?style=for-the-badge&logo=googlemeet&logoColor=fff"
+                          loading="lazy"
+                          height="25"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
           }
 
           @default {

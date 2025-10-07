@@ -1,5 +1,6 @@
 @use '../../../styles' as *;
 @use '../as-project-modal/as-project-modal.scss' as *;
+@use '../as-card/as-card.scss' as *;
 
 .app-highlights-photo {
   width: var(--avatar-size);
