@@ -1,11 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-as-navbar',
-  imports: [],
+  selector: 'as-navbar',
   templateUrl: './as-navbar.html',
-  styleUrl: './as-navbar.scss'
+  styleUrl: './as-navbar.scss',
 })
-export class AsNavbar {
-
-}
+export class AsNavbar {}

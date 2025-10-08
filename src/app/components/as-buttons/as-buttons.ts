@@ -1,8 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-as-buttons',
-  imports: [],
+  selector: 'as-buttons',
   templateUrl: './as-buttons.html',
   styleUrl: './as-buttons.scss',
 })

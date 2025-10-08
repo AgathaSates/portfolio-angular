@@ -41,8 +41,10 @@
             <section class="row row-cols-1 row-cols-sm-2 g-2 py-3 pt-0">
               @for (tec of highlight.tecnologies; track $index) {
                 <div class="col">
-                  <div class="card app-project-card">
-                    <div class="card-body">
+                  <div
+                    class="card app-project-card animate__animated animate__zoomIn animate__slower"
+                  >
+                    <div class="card-body animate__animated animate__zoomIn animate__slower">
                       <h4 class="fw-semibold pb-2">{{ tec.technologytype }}</h4>
                       <div class="d-flex flex-wrap gap-2 gap-sm-2">
                         @for (skill of tec.skills; track $index) {
@@ -65,7 +67,7 @@
 
           @case (HighlightKind.certificates) {
             <div class="carousel slide" [id]="carouselId">
-              <div class="carousel-inner">
+              <div class="carousel-inner animate__animated animate__zoomIn animate__slower">
                 @for (certificate of highlight.certificates ?? []; track $index) {
                   <div class="carousel-item" [class.active]="$index === 0">
                     <img
@@ -83,11 +85,14 @@
                 [attr.data-bs-target]="'#' + carouselId"
                 data-bs-slide="prev"
               >
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span
+                  class="carousel-control-prev-icon animate__animated animate__zoomIn animate__slower"
+                  aria-hidden="true"
+                ></span>
                 <span class="visually-hidden">Anterior</span>
               </button>
               <button
-                class="carousel-control-next"
+                class="carousel-control-next animate__animated animate__zoomIn animate__slower"
                 type="button"
                 [attr.data-bs-target]="'#' + carouselId"
                 data-bs-slide="next"
@@ -101,12 +106,15 @@
           @case (HighlightKind.aboutme) {
             <section>
               <div class="card app-project-card">
-                <div class="card-body text-center">
+                <div
+                  class="card-body text-center animate__animated animate__zoomIn animate__slower"
+                >
                   <div>
                     <div class="d-flex justify-content-center pb-2">
-                      <app-as-image-ring-profile
-                        [profileImage]="'agatha2.jpg'"
-                      ></app-as-image-ring-profile>
+                      <as-image-ring-profile
+                        profileImage="agatha2.jpg"
+                        altImage="Foto de Agatha Sates"
+                      ></as-image-ring-profile>
                     </div>
                     <p class="mb-3">
                       Olá! Eu sou a <strong>Agatha</strong>, tenho <strong>24 anos</strong> e sou de

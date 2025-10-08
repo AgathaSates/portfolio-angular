@@ -50,6 +50,12 @@ button,
   color: $text-dark;
 }
 
+.highlights-bar {
+  --avatar-size: clamp(64px, 23vw, 114px);
+  --avatar-gap: clamp(8px, 6vw, 30px);
+  gap: var(--avatar-gap);
+}
+
 .app-only-desktop {
   display: none;
 }
@@ -62,16 +68,6 @@ button,
   color: #9361d3 !important;
 }
 
-.highlights-bar {
-  --avatar-size: clamp(64px, 23vw, 114px);
-  --avatar-gap: clamp(8px, 6vw, 30px);
-  gap: var(--avatar-gap);
-}
-
-#projects {
-  padding-bottom: calc(var(--bottom-bar-height) + 16px);
-}
-
 @media (min-width: 992px) {
   .app-only-desktop {
     display: block;
@@ -79,6 +75,10 @@ button,
   .app-only-mobile {
     display: none;
   }
+}
+
+#projects {
+  padding-bottom: calc(var(--bottom-bar-height) + 16px);
 }
 
 @media (max-width: 576px) {

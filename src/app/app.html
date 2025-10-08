@@ -1,89 +1,44 @@
-<app-as-navbar></app-as-navbar>
-<app-as-bottom-navbar></app-as-bottom-navbar>
+<as-navbar></as-navbar>
+<as-bottom-navbar></as-bottom-navbar>
 
 <section id="profile" class="container">
   <div class="row p-4 animate__animated animate__backInDown">
     <div class="col-4 d-flex justify-content-center">
-      <app-as-image-ring-profile [profileImage]="'agatha.jpg'"></app-as-image-ring-profile>
+      <as-image-ring-profile
+        profileImage="agatha.jpg"
+        altImage="Foto de Agatha Sates"
+      ></as-image-ring-profile>
     </div>
 
     <div class="col-8">
       <div class="justify-content-center">
         <div class="pt-1">
           <h2>
-            Agatha Sates
+            {{ authorName }}
             <i class="bi bi-patch-check-fill text-primary fs-5 ps-2" aria-label="Verificado"></i>
           </h2>
         </div>
         <div class="pt-sm-3 d-flex flex-nowrap align-items-center gap-3 text-nowrap">
-          <span>20 Tecnologias</span>
-          <span>5 Certificados</span>
+          <span>{{ tecnologyQuantity }} Tecnologias</span>
+          <span>{{ certificatesQuantity }} Certificados</span>
         </div>
       </div>
       <div>
         <div class="pt-3 app-only-desktop">
-          <span>
-            Me chamo Agatha Sates, tenho 24 anos e sou de Canoas/RS. Iniciei recentemente minha
-            jornada no mundo da programação. Atualmente, estou estudando para me tornar uma
-            desenvolvedora Full-Stack pela
-            <a
-              class="text-decoration-none app-mention-academia"
-              href="https://academiadoprogramador.net/inicio"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><strong>Academia do Programador</strong></a
-            >. 💻✨
-          </span>
-          <div class="pt-3 row g-2">
-            <div class="col-6">
-              <app-as-buttons
-                [link]="linklinkedin"
-                title="Seguir perfil no LinkedIn"
-                message="Seguir"
-              ></app-as-buttons>
-            </div>
-
-            <div class="col-6">
-              <app-as-buttons
-                [link]="linkemail"
-                title="Enviar e-mail"
-                message="Mensagem"
-              ></app-as-buttons>
-            </div>
-          </div>
+          <as-profile-bio
+            [bio]="bio"
+            [linkEmail]="linkEmail"
+            [linkLinkedin]="linkLinkedin"
+          ></as-profile-bio>
         </div>
       </div>
     </div>
     <div class="pt-2 app-only-mobile">
-      <span>
-        Me chamo Agatha Sates, tenho 24 anos e sou de Canoas/RS. Iniciei recentemente minha jornada
-        no mundo da programação. Atualmente, estou estudando para me tornar uma desenvolvedora
-        Full-Stack pela
-        <a
-          class="text-decoration-none app-mention-academia"
-          href="https://academiadoprogramador.net/inicio"
-          target="_blank"
-          rel="noopener noreferrer"
-          ><strong>Academia do Programador</strong></a
-        >. 💻✨
-      </span>
-      <div class="pt-3 row g-2">
-        <div class="col-6">
-          <app-as-buttons
-            [link]="linklinkedin"
-            title="Seguir perfil no LinkedIn"
-            message="Seguir"
-          ></app-as-buttons>
-        </div>
-
-        <div class="col-6">
-          <app-as-buttons
-            [link]="linkemail"
-            title="Enviar e-mail"
-            message="Mensagem"
-          ></app-as-buttons>
-        </div>
-      </div>
+      <as-profile-bio
+        [bio]="bio"
+        [linkEmail]="linkEmail"
+        [linkLinkedin]="linkLinkedin"
+      ></as-profile-bio>
     </div>
   </div>
 </section>
@@ -93,7 +48,7 @@
     <div class="row">
       <div class="d-flex justify-content-center flex-nowrap highlights-bar pb-3">
         @for (highlight of highlightsList; track $index) {
-          <app-as-image-ring-highlights [highlight]="highlight"></app-as-image-ring-highlights>
+          <as-image-ring-highlights [highlight]="highlight"></as-image-ring-highlights>
         }
       </div>
     </div>
@@ -112,16 +67,16 @@
     <div class="row row-cols-1 row-cols-sm-2 g-2 py-3">
       @for (project of projects; track $index) {
         <div class="col" data-aos="fade-up" data-aos-duration="3000">
-          <app-as-card
+          <as-card
             [urlGifCard]="project.urlGifCard"
             [titleCard]="project.titleCard"
             [altCard]="project.altCard"
             [linkRepository]="project.linkRepository"
             [modalId]="'projectModal' + $index"
-          ></app-as-card>
+          ></as-card>
         </div>
       }
     </div>
   </div>
-  <app-as-project-modal></app-as-project-modal>
+  <as-project-modal [projects]="projects"></as-project-modal>
 </section>

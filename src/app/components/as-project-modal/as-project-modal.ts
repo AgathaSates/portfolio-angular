@@ -1,13 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { PortfolioProject } from '../../models/portfolio-project';
-import { PORTFOLIO_PROJECTS } from '../../data/portfolio-projects.data';
 
 @Component({
-  selector: 'app-as-project-modal',
-  imports: [],
+  selector: 'as-project-modal',
   templateUrl: './as-project-modal.html',
   styleUrl: './as-project-modal.scss',
 })
 export class AsProjectModal {
-  public readonly projects: readonly PortfolioProject[] = PORTFOLIO_PROJECTS;
+  @Input({ required: true }) public projects!: readonly PortfolioProject[];
 }

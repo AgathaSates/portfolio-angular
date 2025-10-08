@@ -1,4 +1,6 @@
 @use '../../../styles' as *;
+@use '../as-card/as-card.scss' as *;
+@use '../as-project-modal/as-project-modal.scss' as *;
 
 .app-bottom-navbar {
   background-color: $background-dark;
