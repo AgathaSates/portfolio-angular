@@ -28,7 +28,8 @@
               }
             ],
             "styles": ["src/styles.scss"],
-            "scripts": ["bootstrap/dist/js/bootstrap.min.js"]
+            "scripts": ["bootstrap/dist/js/bootstrap.min.js"],
+            "outputPath": "dist/portfolio-angular"
           },
           "configurations": {
             "production": {
@@ -36,12 +37,12 @@
                 {
                   "type": "initial",
                   "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumError": "4MB"
                 },
                 {
                   "type": "anyComponentStyle",
                   "maximumWarning": "4kB",
-                  "maximumError": "8kB"
+                  "maximumError": "400kB"
                 }
               ],
               "outputHashing": "all"
@@ -65,6 +66,15 @@
             }
           },
           "defaultConfiguration": "development"
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "https://AgathaSates.github.io/portfolio-angular/",
+            "repo": "https://github.com/AgathaSates/portfolio-angular",
+            "name": "Agatha Sates",
+            "email": "satesagatha@gmail.com"
+          }
         },
         "extract-i18n": {
           "builder": "@angular/build:extract-i18n"

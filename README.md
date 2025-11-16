@@ -6,15 +6,15 @@
 
 ## 🏠 Página Inicial
 
-![Demonstração do Projeto]()
+![Demonstração do Projeto](./public/tela-inicial.gif)
 
 ## ✨ Destaques / Highlights
 
-![Demonstração do Projeto]()
+![Demonstração do Projeto](./public/destaques.gif)
 
 ## 📁 Projetos em destaque
 
-![Demonstração do Projeto]()
+![Demonstração do Projeto](./public/projetos.gif)
 
 # 💡 Índice
 
@@ -42,7 +42,7 @@ Todo o conteúdo é estruturado em **models** e **arquivos de dados**, mantendo 
 # ✨ Funcionalidades
 
 - 🧑‍💻 **Seção de perfil / bio**  
-  Bloco de apresentação com foto, nome, papel (ex.: *Desenvolvedor(a) Full-stack*) e um texto curto de introdução.
+  Bloco de apresentação com foto, nome, papel (ex.: _Desenvolvedor(a) Full-stack_) e um texto curto de introdução.
 
 - 🌟 **Destaques (Highlights)**  
   Lista de destaques configurável (ex.: tecnologias-chave, anos de experiência, áreas de atuação), carregada a partir de um arquivo de dados tipado.
@@ -57,7 +57,7 @@ Todo o conteúdo é estruturado em **models** e **arquivos de dados**, mantendo 
   Navegação fixa no rodapé para telas menores, facilitando o acesso rápido às seções principais.
 
 - 🎛️ **Botões de ação reutilizáveis**  
-  Componente de botões (ex.: *Ver GitHub*, *LinkedIn*, *Download CV*, *Contato*) usado em diferentes partes da página.
+  Componente de botões (ex.: _Ver GitHub_, _LinkedIn_, _Download CV_, _Contato_) usado em diferentes partes da página.
 
 - 🖼️ **Componentes visuais de imagem com “ring”**  
   Componentes para a imagem de perfil e ícones de destaque com estilo próprio.
@@ -114,7 +114,7 @@ PORTFOLIO-ANGULAR
 
 - 🧠 **Models**: Interfaces e tipos para garantir tipagem forte dos dados (projetos, destaques, conteúdos) e melhorar a experiência no editor/IDE.
 
-- 🗂️ **Data**: Fontes de dados estáticas (*.data.ts) que alimentam o portfólio. Para adicionar ou alterar um projeto/destaque, basta editar esses arquivos.
+- 🗂️ **Data**: Fontes de dados estáticas (\*.data.ts) que alimentam o portfólio. Para adicionar ou alterar um projeto/destaque, basta editar esses arquivos.
 
 - 🎨 **styles.scss**: Estilização global (Bootstrap, utilitários, overrides, etc.).
 
