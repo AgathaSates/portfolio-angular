@@ -7,7 +7,7 @@ import { ContentType } from '../../models/bottom-content';
   styleUrl: './as-bottom-navbar.scss',
 })
 export class AsBottomNavbar {
-  public readonly curriculumVitaeUrl: string = ''; /* colocar "nome.pdf" quando finalizar */
+  public readonly curriculumVitaeUrl: string = 'Currículo-AgathaSates.pdf';
   readonly contentType = ContentType;
 
   public selectedContentType: ContentType = ContentType.Contact;
@@ -23,7 +23,7 @@ export class AsBottomNavbar {
   public onDownloadCurriculumVitae(): void {
     const temporaryAnchorElement: HTMLAnchorElement = document.createElement('a');
     temporaryAnchorElement.href = this.curriculumVitaeUrl;
-    temporaryAnchorElement.download = ''; /* colocar "nome.pdf" quando finalizar */
+    temporaryAnchorElement.download = 'Currículo-AgathaSates.pdf';
     temporaryAnchorElement.click();
     temporaryAnchorElement.remove();
   }

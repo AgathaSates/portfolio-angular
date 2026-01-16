@@ -4,8 +4,102 @@ export const PORTFOLIO_PROJECTS: readonly PortfolioProject[] = [
   {
     authorDisplayName: 'Agatha Sates',
     authorAvatarUrl: 'agatha.jpg',
+
+    urlGifCard: 'oblivion-drive-login-e-pagina-inicial.gif',
+    titleCard: 'OblivionDrive — Locadora de Veículos (Fullstack)',
+    altCard: 'Projeto OblivionDrive - demonstração de login e página inicial',
+    linkRepository: 'https://github.com/AgathaSates/oblivion-drive',
+
+    gifsUrls: [
+      'oblivion-drive-login-e-pagina-inicial.gif',
+      'oblivion-drive-navegacao-entre-modulos.gif',
+      'oblivion-drive-cadastro-de-aluguel.gif',
+      'oblivion-drive-devolucao-e-missao-nota.gif',
+      'oblivion-drive-envio-email-e-relatorio-financeiro.gif',
+    ],
+
+    skillsIcons: [
+      { icon: 'https://skillicons.dev/icons?i=github&theme=dark', title: 'GitHub' },
+
+      { icon: 'https://skillicons.dev/icons?i=angular&theme=dark', title: 'Angular' },
+      { icon: 'https://skillicons.dev/icons?i=ts&theme=dark', title: 'TypeScript' },
+      { icon: 'https://skillicons.dev/icons?i=rxjs&theme=dark', title: 'RxJS' },
+      { icon: 'https://skillicons.dev/icons?i=sass&theme=dark', title: 'SCSS' },
+      { icon: 'https://skillicons.dev/icons?i=dotnet&theme=dark', title: '.NET' },
+      { icon: 'https://skillicons.dev/icons?i=cs&theme=dark', title: 'C#' },
+
+      { icon: 'https://avatars.githubusercontent.com/u/890883?s=256', title: 'AutoMapper' },
+      {
+        icon: 'https://github.com/FluentValidation/FluentValidation/raw/main/fv-small.png',
+        title: 'FluentValidation',
+      },
+
+      { icon: 'https://skillicons.dev/icons?i=azure&theme=dark', title: 'Azure Static Web Apps' },
+      { icon: 'https://cdn.simpleicons.org/githubactions?viewbox=auto', title: 'GitHub Actions' },
+    ],
+
+    descriptionTitle: '📚 Introdução',
+    description:
+      'O OblivionDrive é uma aplicação fullstack para gestão de uma locadora de veículos, estruturada em modelo multi-tenant (isolamento por tenant) e organizada por módulos no front-end (Angular) e no back-end (.NET). O sistema cobre a gestão de clientes (PF/PJ) e condutores, veículos e grupos de veículos, fluxo completo de aluguéis (retirada e devolução), além de configurações como planos, cupons e serviços adicionais. Também inclui geração de documentos/relatórios em PDF (nota fiscal e resumo/relatório financeiro) e envio de nota fiscal por e-mail.',
+    featuresTitle: '✨ Funcionalidades',
+    features: [
+      '🏢 Multi-tenant (locadoras por tenant)',
+      '🔐 Autenticação e autorização (módulo Auth)',
+      '🚗 Gestão de Aluguéis (cadastrar/listar/editar/excluir/retirada/devolução)',
+      '👤 Gestão de Clientes e Condutores',
+      '🧾 Emissão de Nota Fiscal em PDF',
+      '📧 Envio da Nota Fiscal por e-mail',
+      '📊 Relatório / resumo financeiro em PDF',
+      '⚙️ Módulos de apoio: planos, cupons, serviços adicionais, preço de combustível, parceiros, veículos/grupos, funcionários',
+    ],
+  },
+
+  {
+    authorDisplayName: 'Agatha Sates',
+    authorAvatarUrl: 'agatha.jpg',
+
+    urlGifCard: 'organiza-med-tela-inicial.gif',
+    titleCard: 'Organiza Med — Gestão de Clínica',
+    altCard: 'Projeto Organiza Med - demonstração da tela inicial',
+    linkRepository: 'https://github.com/AgathaSates/organiza-med',
+
+    gifsUrls: [
+      'organiza-med-tela-inicial.gif',
+      'organiza-med-medicos.gif',
+      'organiza-med-pacientes.gif',
+      'organiza-med-procedimentos.gif',
+    ],
+
+    skillsIcons: [
+      { icon: 'https://skillicons.dev/icons?i=github&theme=dark', title: 'GitHub' },
+
+      { icon: 'https://skillicons.dev/icons?i=angular&theme=dark', title: 'Angular' },
+      { icon: 'https://skillicons.dev/icons?i=ts&theme=dark', title: 'TypeScript' },
+      { icon: 'https://skillicons.dev/icons?i=rxjs&theme=dark', title: 'RxJS' },
+      { icon: 'https://skillicons.dev/icons?i=sass&theme=dark', title: 'SCSS' },
+      { icon: 'https://skillicons.dev/icons?i=azure&theme=dark', title: 'Azure Static Web Apps' },
+      { icon: 'https://cdn.simpleicons.org/githubactions?viewbox=auto', title: 'GitHub Actions' },
+    ],
+
+    descriptionTitle: '📚 Introdução',
+    description:
+      'O Organiza Med é uma aplicação Angular voltada para organizar o dia a dia de uma clínica, com foco em cadastro/gestão de pacientes e médicos, controle de procedimentos (consultas e cirurgias) e centralização das atividades médicas em uma interface única. O projeto foi estruturado em módulos claros para facilitar manutenção, reutilização de componentes e evolução futura, incluindo um módulo de autenticação preparado para quando a aplicação for integrada a uma API de back-end.',
+    featuresTitle: '✨ Funcionalidades',
+    features: [
+      '👩‍⚕️ Gestão de Médicos (cadastro, listagem, edição e exclusão)',
+      '🧑‍🤝‍🧑 Gestão de Pacientes (cadastro, listagem, edição e exclusão)',
+      '🏥 Gestão de Procedimentos (consultas e cirurgias)',
+      '📌 Atividades Médicas (visualização/organização das atividades)',
+      '🔐 Módulo de Autenticação (preparado para integração com API)',
+      '🧩 Tela inicial com cards de navegação',
+      '📱 Layout responsivo',
+    ],
+  },
+  {
+    authorDisplayName: 'Agatha Sates',
+    authorAvatarUrl: 'agatha.jpg',
     urlGifCard: 'gestao-de-estacionamento.gif',
-    titleCard: 'Gestão de estacionamento API',
+    titleCard: 'Gestão de estacionamento — API',
     altCard: 'Projeto Gestão de estacionamento API - tela inicial no smartphone',
     linkRepository: 'https://github.com/AgathaSates/Gestao-de-Estacionamentos',
     gifsUrls: ['gestao-de-estacionamento-cadastro.png', 'gestao-de-estacionamento-checkin.png'],
@@ -54,7 +148,7 @@ export const PORTFOLIO_PROJECTS: readonly PortfolioProject[] = [
     authorDisplayName: 'Agatha Sates',
     authorAvatarUrl: 'agatha.jpg',
     urlGifCard: 'gerador-de-testes.gif',
-    titleCard: 'Gerador de testes',
+    titleCard: 'Gerador de testes — ASP.NET MVC',
     altCard: 'Projeto Gerador de testes - tela inicial no smartphone',
     linkRepository: 'https://github.com/AgathaSates/Gerador-de-Testes',
     gifsUrls: [

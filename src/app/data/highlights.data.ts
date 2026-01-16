@@ -125,6 +125,7 @@ export const HIGHLIGHTS_LIST: readonly Highlights[] = [
       { imageUrl: 'certificado-agatha-banco-de-dados.jpg', title: 'Banco de Dados' },
       { imageUrl: 'certificado-agatha-testes-automatizados.jpg', title: 'Testes Automatizados' },
       { imageUrl: 'certificado-agatha-api.jpg', title: 'Desenvolvimento de API' },
+      { imageUrl: 'Certificado-agatha-conclusao.jpg', title: 'Conclusão do curso' },
     ],
   },
   {

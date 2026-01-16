@@ -34,15 +34,14 @@ export class App {
     'mailto:agathasates.dev@gmail.com?subject=Contato%20via%20portf%C3%B3lio&body=Olá%2C%20gostaria%20de%20entrar%20em%20contato%20com%20você.';
   public authorName: string = 'Agatha Sates';
   public tecnologyQuantity: string = '40';
-  public certificatesQuantity: string = '5';
+  public certificatesQuantity: string = '7';
   public bio: string = `Me chamo Agatha Sates, tenho 24 anos e sou de Canoas/RS. Iniciei recentemente minha jornada no
-  mundo da programação. Atualmente, estou estudando para me tornar uma desenvolvedora Full-Stack
-  pela
-  <a
-    class="text-decoration-none app-mention-academia"
-    href="https://academiadoprogramador.net/inicio"
-    target="_blank"
-    rel="noopener noreferrer"
-    ><strong>Academia do Programador</strong></a
-  >. 💻✨`;
+mundo da programação. Sou formada como Desenvolvedora Full-Stack pela
+<a
+  class="text-decoration-none app-mention-academia"
+  href="https://academiadoprogramador.net/inicio"
+  target="_blank"
+  rel="noopener noreferrer"
+  ><strong>Academia do Programador</strong></a
+>. 💻✨`;
 }
