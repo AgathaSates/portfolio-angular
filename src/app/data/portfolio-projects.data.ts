@@ -6,7 +6,7 @@ export const PORTFOLIO_PROJECTS: readonly PortfolioProject[] = [
     authorAvatarUrl: 'agatha.jpg',
 
     urlGifCard: 'oblivion-drive-login-e-pagina-inicial.gif',
-    titleCard: 'OblivionDrive — Locadora de Veículos (Fullstack)',
+    titleCard: 'Oblivion Drive — Locadora de Veículos (FullStack)',
     altCard: 'Projeto OblivionDrive - demonstração de login e página inicial',
     linkRepository: 'https://github.com/AgathaSates/oblivion-drive',
 
@@ -59,7 +59,7 @@ export const PORTFOLIO_PROJECTS: readonly PortfolioProject[] = [
     authorAvatarUrl: 'agatha.jpg',
 
     urlGifCard: 'organiza-med-tela-inicial.gif',
-    titleCard: 'Organiza Med — Gestão de Clínica',
+    titleCard: 'Organiza Med — Gestão de Clínica Médica (FullStack)',
     altCard: 'Projeto Organiza Med - demonstração da tela inicial',
     linkRepository: 'https://github.com/AgathaSates/organiza-med',
 
@@ -99,7 +99,7 @@ export const PORTFOLIO_PROJECTS: readonly PortfolioProject[] = [
     authorDisplayName: 'Agatha Sates',
     authorAvatarUrl: 'agatha.jpg',
     urlGifCard: 'gestao-de-estacionamento.gif',
-    titleCard: 'Gestão de estacionamento — API',
+    titleCard: 'Gestão de Estacionamento — API (HTTP/JSON)',
     altCard: 'Projeto Gestão de estacionamento API - tela inicial no smartphone',
     linkRepository: 'https://github.com/AgathaSates/Gestao-de-Estacionamentos',
     gifsUrls: ['gestao-de-estacionamento-cadastro.png', 'gestao-de-estacionamento-checkin.png'],
@@ -148,7 +148,7 @@ export const PORTFOLIO_PROJECTS: readonly PortfolioProject[] = [
     authorDisplayName: 'Agatha Sates',
     authorAvatarUrl: 'agatha.jpg',
     urlGifCard: 'gerador-de-testes.gif',
-    titleCard: 'Gerador de testes — ASP.NET MVC',
+    titleCard: 'Gerador de Testes Escolar — ASP.NET MVC',
     altCard: 'Projeto Gerador de testes - tela inicial no smartphone',
     linkRepository: 'https://github.com/AgathaSates/Gerador-de-Testes',
     gifsUrls: [
