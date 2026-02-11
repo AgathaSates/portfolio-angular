@@ -8,6 +8,6 @@ import { AsButtons } from '../as-buttons/as-buttons';
 })
 export class AsProfileBio {
   @Input({ required: true }) public linkLinkedin!: string;
-  @Input({ required: true }) public linkEmail!: string;
+  @Input({ required: true }) public linkMessage!: string;
   @Input({ required: true }) public bio!: string;
 }

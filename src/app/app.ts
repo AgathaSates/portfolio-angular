@@ -30,8 +30,8 @@ export class App {
   public readonly highlightsList: readonly Highlights[] = HIGHLIGHTS_LIST;
   public readonly projects: readonly PortfolioProject[] = PORTFOLIO_PROJECTS;
   public linkLinkedin: string = 'https://www.linkedin.com/in/agatha-sates-4537a7355';
-  public linkEmail: string =
-    'mailto:agathasates.dev@gmail.com?subject=Contato%20via%20portf%C3%B3lio&body=Olá%2C%20gostaria%20de%20entrar%20em%20contato%20com%20você.';
+  public linkMessage: string =
+    'https://wa.me/5551985962346?text=Ol%C3%A1%21%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20entrar%20em%20contato%20sobre%20uma%20oportunidade%20de%20trabalho.';
   public authorName: string = 'Agatha Sates';
   public tecnologyQuantity: string = '40';
   public certificatesQuantity: string = '7';
@@ -43,5 +43,7 @@ mundo da programação. Sou formada como Desenvolvedora Full-Stack pela
   target="_blank"
   rel="noopener noreferrer"
   ><strong>Academia do Programador</strong></a
->. 💻✨`;
+>. 💻✨
+<br/>
+Atualmente, estou em busca da minha primeira oportunidade profissional na área, com muita vontade de aprender, evoluir e contribuir com o time. 🚀`;
 }
